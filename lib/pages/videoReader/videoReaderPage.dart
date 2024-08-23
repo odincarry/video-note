@@ -9,8 +9,8 @@ import 'package:video_player/video_player.dart';
 
 import '../../utils/storage.dart';
 
-class SidebarXController extends ChangeNotifier {
-  SidebarXController({
+class SidebarController extends ChangeNotifier {
+  SidebarController({
     bool? extended,
   }) {
     _setExtedned(extended ?? false);
@@ -57,7 +57,7 @@ late final VideoPlayerController videoPlayerController;
 
 
 class _VideoReaderPage extends State<VideoReaderPage> with SingleTickerProviderStateMixin  {
-  final controller =  SidebarXController(extended: true);
+  final controller =  SidebarController(extended: true);
   late AnimationController animationController;
   late Animation<double> _animation;
   final textController = TextEditingController(
